@@ -1,10 +1,10 @@
-import Button from './Button';
+import ButtonDesign from "./Button";
 
 export default {
-  component: Button,
-  title: 'atom/Button',
+  component: ButtonDesign,
+  title: "atom/Button"
 };
 
 export const Button = () => {
-  return <Button todo="" />;
+  return <ButtonDesign todo="" />;
 };
