@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* typography */
+  body {
+    @apply text-size-2 md:text-size-3 leading-normal tracking-normal font-normal text-black;
+  }
+}
+
+@layer components {
+  /* typography */
+  .typography-text-xxs {
+    @apply text-size-1 md:text-size-2 leading-normal tracking-normal font-normal;
+  }
+  .typography-text-xs {
+    @apply text-size-2 md:text-size-3 leading-normal tracking-normal font-normal;
+  }
+  .typography-text-sm {
+    @apply text-size-3 md:text-size-4 leading-normal tracking-normal font-normal;
+  }
+  .typography-text-md {
+    @apply text-size-4 md:text-size-7 leading-normal tracking-normal font-normal;
+  }
+  .typography-text-lg {
+    @apply text-size-5 xs:text-size-7  md:text-size-8 leading-[1.385] tracking-normal font-normal;
+  }
+  .typography-text-xl {
+    @apply text-size-6 xs:text-size-8 md:text-size-9 leading-[1.29] tracking-normal font-normal;
+  }
+  .typography-text-xxl {
+    @apply text-size-7 xs:text-size-8 md:text-size-9 leading-[1.2] tracking-normal font-normal;
+  }
+}

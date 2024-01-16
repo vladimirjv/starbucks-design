@@ -444,6 +444,23 @@ video {
   display: none;
 }
 
+/* typography */
+
+body {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1.6rem;
+  }
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -542,4 +559,119 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+}
+
+/* typography */
+
+.font-sans {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.text-size-1 {
+  font-size: 1.3rem;
+}
+
+.text-size-2 {
+  font-size: 1.4rem;
+}
+
+.text-size-3 {
+  font-size: 1.6rem;
+}
+
+.text-size-4 {
+  font-size: 1.9rem;
+}
+
+.text-size-5 {
+  font-size: 2.0rem;
+}
+
+.text-size-6 {
+  font-size: 2.2rem;
+}
+
+.text-size-7 {
+  font-size: 2.4rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.leading-\[1\.29\] {
+  line-height: 1.29;
+}
+
+.leading-\[1\.2\] {
+  line-height: 1.2;
+}
+
+.leading-\[1\.385\] {
+  line-height: 1.385;
+}
+
+.leading-normal {
+  line-height: 1.5;
+}
+
+.tracking-normal {
+  letter-spacing: -0.01em;
+}
+
+.text-\[rgba\(0\2c 0\2c 0\2c 0\.58\)\] {
+  color: rgba(0,0,0,0.58);
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+@media (min-width: 375px) {
+  .xs\:text-size-7 {
+    font-size: 2.4rem;
+  }
+
+  .xs\:text-size-8 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:text-size-2 {
+    font-size: 1.4rem;
+  }
+
+  .md\:text-size-3 {
+    font-size: 1.6rem;
+  }
+
+  .md\:text-size-4 {
+    font-size: 1.9rem;
+  }
+
+  .md\:text-size-7 {
+    font-size: 2.4rem;
+  }
+
+  .md\:text-size-8 {
+    font-size: 2.8rem;
+  }
+
+  .md\:text-size-9 {
+    font-size: 3.6rem;
+  }
 }
