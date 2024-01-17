@@ -5,7 +5,7 @@
 @layer base {
   /* typography */
   body {
-    @apply text-size-2 md:text-size-3 leading-normal tracking-normal font-normal text-black;
+    @apply  leading-normal tracking-normal font-normal text-black;
   }
 }
 

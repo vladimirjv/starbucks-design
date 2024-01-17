@@ -8,7 +8,7 @@ export default {
 export const TypographyStory = () => {
   parent;
   return (
-    <div>
+    <div className="md">
       <Typography type="h1">H1 sed dolores dolores</Typography>
       <Typography type="h2">H2 quod nisi facilis</Typography>
       <Typography type="h4">H4 Amet dolorem fugit molestiae quod.</Typography>
