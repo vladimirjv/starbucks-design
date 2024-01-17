@@ -1,59 +1,77 @@
-// eslint-disable-next-line
-const plugin = require("tailwindcss/plugin");
-
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  theme: {},
-  plugins: [
-    plugin(function () {}, {
-      theme: {
-        extend: {
-          screens: {
-            xs: "375px"
-          },
-          letterSpacing: {
-            normal: "-0.01em",
-            loose: "0.1em",
-            looser: "0.15em"
-          },
-          lineHeight: {
-            "leading-compact": "1.2"
-          },
-          fontSize: {
-            "size-1": "1.3rem",
-            "size-2": "1.4rem",
-            "size-3": "1.6rem",
-            "size-4": "1.9rem",
-            "size-5": "2.0rem",
-            "size-6": "2.2rem",
-            "size-7": "2.4rem",
-            "size-8": "2.8rem",
-            "size-9": "3.6rem",
-            "size-10": "5.0rem"
-          },
-          colors: {
-            "true-white": "#ffffff",
-            "true-black": "#000000",
-            "cool-neutral": "#f9f9f9",
-            "warn-neutral": "f2f0eb",
-            ceramic: "#edebe9",
-            "starbucks-green": "#006241",
-            "accent-green": "#00754A",
-            "light-green": "#d4e9e2",
-            "house-green": "#1E3932",
-            "rewards-gold": "#cba258",
-            "light-gold": "#dfc49d",
-            "lightest-gold": "#faf6ee",
-            "error-red": "#d62b1f",
-            "warn-yellow": "#fbbc05",
-            "black-text": "rgba(0, 0, 0, .87)",
-            "soft-black-text": "rgba(0, 0, 0, .58)",
-            "white-text": "rgba(255, 255, 255, 1)",
-            "soft-white-text": "rgba(255, 255, 255, .70)",
-          }
-        }
-      }
-    })
-  ]
-};
+module.exports = {
+  darkMode: ["class"],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+  ],
+  prefix: "",
+  theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
+    extend: {
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+}
